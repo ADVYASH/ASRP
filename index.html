@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASRP 3 | Nether SMP</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at center, #1a0000, #000000);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#ff3c00;
+    text-shadow:0 0 15px #ff3c00;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:500;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:120px;
+    font-weight:900;
+    letter-spacing:5px;
+    background: linear-gradient(90deg,#ff3c00,#ff8a00,#ff3c00);
+    -webkit-background-clip:text;
+    color:transparent;
+    text-shadow:0 0 40px rgba(255,60,0,0.8);
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow{
+    from{ text-shadow:0 0 30px #ff3c00; }
+    to{ text-shadow:0 0 80px #ff8a00; }
+}
+
+.hero p{
+    font-size:22px;
+    color:#ccc;
+    margin-top:10px;
+}
+
+.button{
+    margin-top:40px;
+    padding:15px 40px;
+    border:none;
+    background:linear-gradient(45deg,#ff3c00,#ff8a00);
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    color:white;
+    box-shadow:0 0 20px #ff3c00;
+}
+
+/* PORTAL EFFECT */
+
+.portal{
+    position:absolute;
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    background: radial-gradient(circle,#7a00ff,#2a003d,#000);
+    filter: blur(30px);
+    opacity:0.5;
+    animation: portal 6s infinite linear;
+}
+
+@keyframes portal{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+/* SERVER SECTION */
+
+.section{
+    padding:120px 80px;
+    text-align:center;
+}
+
+.section h2{
+    font-size:50px;
+    margin-bottom:20px;
+    color:#ff4c00;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:60px;
+}
+
+.card{
+    background:rgba(0,0,0,0.6);
+    border:1px solid #ff3c00;
+    padding:30px;
+    width:250px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px #ff3c00;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:black;
+    color:#888;
+}
+
+.logo-container{
+width:60px;
+height:60px;
+border-radius:50%;
+overflow:hidden;
+border:2px solid #ff3c00;
+box-shadow:0 0 15px #ff3c00;
+}
+
+.logo-video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.fire-text{
+font-size:120px;
+font-weight:900;
+text-align:center;
+letter-spacing:6px;
+
+background: linear-gradient(
+0deg,
+#ff0000,
+#ff5e00,
+#ffae00,
+#ffff00
+);
+
+-webkit-background-clip:text;
+color:transparent;
+
+text-shadow:
+0 0 10px #ff3c00,
+0 0 20px #ff3c00,
+0 0 40px #ff5e00,
+0 0 80px #ff8a00;
+
+animation: fire 1.5s infinite alternate;
+}
+
+@keyframes fire{
+0%{
+text-shadow:
+0 0 10px #ff3c00,
+0 0 20px #ff3c00,
+0 0 40px #ff5e00;
+transform: translateY(0px);
+}
+
+100%{
+text-shadow:
+0 0 20px #ff6a00,
+0 0 40px #ff8a00,
+0 0 80px #ffae00;
+transform: translateY(-3px);
+}
+}
+
+.card-link{
+text-decoration:none;
+color:white;
+display:inline-block;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo-container">
+<video autoplay muted loop class="logo-video">
+<source src="asrplogo.mp4" type="video/mp4">
+</video>
+</div>
+
+<div>
+<a href="#">Home</a>
+<a href="#">Server</a>
+<a href="#">Rules</a>
+<a href="#">Discord</a>
+</div>
+
+</nav>
+
+<div class="portal"></div>
+
+<section class="hero">
+
+<h1>ASRP 3</h1>
+
+<p>Enter The Nether Survival Experience</p>
+
+<button class="button">Join Server</button>
+
+</section>
+
+
+<section class="section">
+
+<h2>Server Features</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚔ Survival SMP</h3>
+<p>Hardcore survival with powerful economy and claims.</p>
+</div>
+
+<div class="card">
+<h3>🔥 Nether Events</h3>
+<p>Weekly Nether boss fights and lava arena battles.</p>
+</div>
+
+<a href="ranks" class="card-link">
+<div class="card">
+<h3>👑 Premium Ranks</h3>
+<p>Unlock kits, powers, and exclusive items.</p>
+</div>
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 ASRP 3 Minecraft Server
+
+</footer>
+
+</body>
+</html>
