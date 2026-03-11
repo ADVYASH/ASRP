@@ -2,281 +2,180 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASRP 3 | Nether SMP</title>
+<title>ASRP 3 Whitelist</title>
 
 <style>
-
 body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background: radial-gradient(circle at center, #1a0000, #000000);
-    color:white;
-    overflow-x:hidden;
-}
-
-/* NAVBAR */
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    background:rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-}
-
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#ff3c00;
-    text-shadow:0 0 15px #ff3c00;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:30px;
-    font-weight:500;
-}
-
-/* HERO SECTION */
-
-.hero{
-    height:90vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:120px;
-    font-weight:900;
-    letter-spacing:5px;
-    background: linear-gradient(90deg,#ff3c00,#ff8a00,#ff3c00);
-    -webkit-background-clip:text;
-    color:transparent;
-    text-shadow:0 0 40px rgba(255,60,0,0.8);
-    animation: glow 3s infinite alternate;
-}
-
-@keyframes glow{
-    from{ text-shadow:0 0 30px #ff3c00; }
-    to{ text-shadow:0 0 80px #ff8a00; }
-}
-
-.hero p{
-    font-size:22px;
-    color:#ccc;
-    margin-top:10px;
-}
-
-.button{
-    margin-top:40px;
-    padding:15px 40px;
-    border:none;
-    background:linear-gradient(45deg,#ff3c00,#ff8a00);
-    font-size:18px;
-    border-radius:10px;
-    cursor:pointer;
-    color:white;
-    box-shadow:0 0 20px #ff3c00;
-}
-
-/* PORTAL EFFECT */
-
-.portal{
-    position:absolute;
-    width:400px;
-    height:400px;
-    border-radius:50%;
-    background: radial-gradient(circle,#7a00ff,#2a003d,#000);
-    filter: blur(30px);
-    opacity:0.5;
-    animation: portal 6s infinite linear;
-}
-
-@keyframes portal{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
-}
-
-/* SERVER SECTION */
-
-.section{
-    padding:120px 80px;
-    text-align:center;
-}
-
-.section h2{
-    font-size:50px;
-    margin-bottom:20px;
-    color:#ff4c00;
-}
-
-.cards{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    margin-top:60px;
-}
-
-.card{
-    background:rgba(0,0,0,0.6);
-    border:1px solid #ff3c00;
-    padding:30px;
-    width:250px;
-    border-radius:15px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 30px #ff3c00;
-}
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:30px;
-    background:black;
-    color:#888;
-}
-
-.logo-container{
-width:60px;
-height:60px;
-border-radius:50%;
-overflow:hidden;
-border:2px solid #ff3c00;
-box-shadow:0 0 15px #ff3c00;
-}
-
-.logo-video{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.fire-text{
-font-size:120px;
-font-weight:900;
-text-align:center;
-letter-spacing:6px;
-
-background: linear-gradient(
-0deg,
-#ff0000,
-#ff5e00,
-#ffae00,
-#ffff00
-);
-
--webkit-background-clip:text;
-color:transparent;
-
-text-shadow:
-0 0 10px #ff3c00,
-0 0 20px #ff3c00,
-0 0 40px #ff5e00,
-0 0 80px #ff8a00;
-
-animation: fire 1.5s infinite alternate;
-}
-
-@keyframes fire{
-0%{
-text-shadow:
-0 0 10px #ff3c00,
-0 0 20px #ff3c00,
-0 0 40px #ff5e00;
-transform: translateY(0px);
-}
-
-100%{
-text-shadow:
-0 0 20px #ff6a00,
-0 0 40px #ff8a00,
-0 0 80px #ffae00;
-transform: translateY(-3px);
-}
-}
-
-.card-link{
-text-decoration:none;
+font-family: Arial;
+background:#0f172a;
 color:white;
-display:inline-block;
+text-align:center;
+}
+
+.container{
+width:500px;
+margin:auto;
+margin-top:50px;
+background:#1e293b;
+padding:30px;
+border-radius:10px;
+}
+
+input,select,textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:6px;
+border:none;
+}
+
+button{
+padding:12px;
+width:100%;
+background:#22c55e;
+border:none;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+.login-btn{
+background:#5865F2;
 }
 </style>
+
 </head>
 
 <body>
 
-<nav>
+<div class="container">
 
-<div class="logo-container">
-<video autoplay muted loop class="logo-video">
-<source src="asrplogo.mp4" type="video/mp4">
-</video>
-</div>
+<h1>ASRP 3 SMP Whitelist</h1>
 
-<div>
-<a href="#">Home</a>
-<a href="#">Server</a>
-<a href="#">Rules</a>
-<a href="#">Discord</a>
-</div>
+<button class="login-btn" onclick="loginDiscord()">
+Login with Discord
+</button>
 
-</nav>
+<form id="form" style="display:none">
 
-<div class="portal"></div>
+<input id="mcname" placeholder="Minecraft Username" required>
 
-<section class="hero">
+<input id="age" placeholder="Age" required>
 
-<h1>ASRP 3</h1>
+<input id="country" placeholder="Country / Timezone">
 
-<p>Enter The Nether Survival Experience</p>
+<select id="activity">
+<option>1-2 hours daily</option>
+<option>Weekends</option>
+<option>Very Active</option>
+</select>
 
-<button class="button">Join Server</button>
+<textarea id="why" placeholder="Why do you want to join?" required></textarea>
 
-</section>
+<textarea id="experience" placeholder="SMP Experience"></textarea>
 
+<select id="type">
+<option>Builder</option>
+<option>Redstone</option>
+<option>PvP</option>
+<option>Explorer</option>
+<option>Farmer</option>
+</select>
 
-<section class="section">
+<button type="submit">Submit Application</button>
 
-<h2>Server Features</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>⚔ Survival SMP</h3>
-<p>Hardcore survival with powerful economy and claims.</p>
-</div>
-
-<div class="card">
-<h3>🔥 Nether Events</h3>
-<p>Weekly Nether boss fights and lava arena battles.</p>
-</div>
-
-<a href="ranks" class="card-link">
-<div class="card">
-<h3>👑 Premium Ranks</h3>
-<p>Unlock kits, powers, and exclusive items.</p>
-</div>
-</a>
+</form>
 
 </div>
 
-</section>
+<script>
 
-<footer>
+const CLIENT_ID = "YOUR_CLIENT_ID"
+const REDIRECT = https://advyash.github.io/ASRP
+const WEBHOOK = "https://discord.com/api/webhooks/1481369069834997912/0UcEa3viJP60aEV-PUdWRC_Zel9lUXZjF42Mmzf1YJ3VuRNUzmzaM-B-6OQfPjkS6br1"
 
-© 2026 ASRP 3 Minecraft Server
+let discordUser = null
 
-</footer>
+function loginDiscord(){
+
+window.location.href =
+`https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT}&response_type=token&scope=identify`
+
+}
+
+if(window.location.hash){
+
+const params = new URLSearchParams(window.location.hash.substring(1))
+const token = params.get("access_token")
+
+fetch("https://discord.com/api/users/@me",{
+headers:{
+authorization:`Bearer ${token}`
+}
+})
+.then(res=>res.json())
+.then(user=>{
+
+discordUser = user
+
+document.querySelector(".login-btn").style.display="none"
+document.getElementById("form").style.display="block"
+
+})
+
+}
+
+document.getElementById("form").addEventListener("submit",function(e){
+
+e.preventDefault()
+
+const data = {
+
+content:`<@${discordUser.id}> submitted a whitelist application`,
+
+embeds:[
+{
+title:"ASRP 3 Whitelist Application",
+color:5763719,
+
+fields:[
+
+{name:"Discord",value:`${discordUser.username}#${discordUser.discriminator}`},
+
+{name:"User ID",value:discordUser.id},
+
+{name:"Minecraft Username",value:document.getElementById("mcname").value},
+
+{name:"Age",value:document.getElementById("age").value},
+
+{name:"Country",value:document.getElementById("country").value},
+
+{name:"Activity",value:document.getElementById("activity").value},
+
+{name:"Why Join",value:document.getElementById("why").value},
+
+{name:"Experience",value:document.getElementById("experience").value},
+
+{name:"Player Type",value:document.getElementById("type").value}
+
+]
+
+}
+]
+
+}
+
+fetch(WEBHOOK,{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify(data)
+})
+
+alert("Application Sent!")
+
+})
+
+</script>
 
 </body>
 </html>
