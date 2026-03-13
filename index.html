@@ -2,180 +2,305 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ASRP 3 Whitelist</title>
+<title>ASRP III</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
 body{
-font-family: Arial;
-background:#0f172a;
 color:white;
+background:#0b0b0b;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:flex-end;
+padding:15px 40px;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:18px;
+padding:8px 16px;
+border-radius:6px;
+transition:.3s;
+}
+
+nav a:hover{
+background:#ff7a00;
+box-shadow:0 0 10px #ff7a00;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),
+url("asrp.mp4") center/cover no-repeat;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
 }
 
-.container{
-width:500px;
-margin:auto;
-margin-top:50px;
-background:#1e293b;
-padding:30px;
-border-radius:10px;
+.hero h1{
+font-size:65px;
+color:#ff7a00;
+text-shadow:0 0 20px #ff7a00;
 }
 
-input,select,textarea{
-width:100%;
-padding:10px;
-margin:8px 0;
-border-radius:6px;
-border:none;
+.hero p{
+margin-top:15px;
+font-size:20px;
+max-width:650px;
 }
 
-button{
-padding:12px;
-width:100%;
-background:#22c55e;
-border:none;
-color:white;
-font-size:16px;
-cursor:pointer;
+.buttons{
+margin-top:30px;
 }
 
-.login-btn{
+.btn{
+padding:14px 28px;
+margin:10px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+}
+
+.discord{
 background:#5865F2;
+color:white;
 }
-</style>
 
+.learn{
+background:#ff7a00;
+color:white;
+}
+
+/* QUICK LINKS SECTION */
+
+.quick{
+
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.95)),
+url("quick.jpg") center/cover no-repeat;
+
+padding:120px 10%;
+text-align:center;
+}
+
+.quick h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.quick span{
+color:#ff7a00;
+}
+
+.grid{
+margin-top:40px;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(0,0,0,.6);
+padding:35px;
+border-radius:12px;
+border:1px solid rgba(255,120,0,.2);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 20px rgba(255,120,0,.5);
+}
+
+.card i{
+font-size:32px;
+color:#ff7a00;
+margin-bottom:10px;
+}
+
+.card a{
+display:block;
+margin-top:8px;
+color:#ff7a00;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+background:#050505;
+padding:60px 10%;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.footer-links a{
+display:block;
+color:white;
+opacity:.7;
+text-decoration:none;
+margin:4px 0;
+}
+
+.footer-links a:hover{
+color:#ff7a00;
+}
+
+.bottom{
+text-align:center;
+padding:15px;
+background:#030303;
+opacity:.7;
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- NAVBAR -->
 
-<h1>ASRP 3 SMP Whitelist</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="#">Aafat</a>
+<a href="about.html">About</a>
+<a href="rules.html">Rules</a>
+<a href="apply.html">Apply</a>
+<a href="store.html">Store</a>
+</nav>
 
-<button class="login-btn" onclick="loginDiscord()">
-Login with Discord
-</button>
+<!-- HERO -->
 
-<form id="form" style="display:none">
+<section class="hero">
 
-<input id="mcname" placeholder="Minecraft Username" required>
+<h1>ASRP III Has Arrived</h1>
 
-<input id="age" placeholder="Age" required>
+<p>
+Experience the most immersive GTA Roleplay community.
+Create your story, build your legacy and become a legend.
+</p>
 
-<input id="country" placeholder="Country / Timezone">
+<div class="buttons">
 
-<select id="activity">
-<option>1-2 hours daily</option>
-<option>Weekends</option>
-<option>Very Active</option>
-</select>
+<a class="btn discord" href="#">
+<i class="fa-brands fa-discord"></i> Discord
+</a>
 
-<textarea id="why" placeholder="Why do you want to join?" required></textarea>
-
-<textarea id="experience" placeholder="SMP Experience"></textarea>
-
-<select id="type">
-<option>Builder</option>
-<option>Redstone</option>
-<option>PvP</option>
-<option>Explorer</option>
-<option>Farmer</option>
-</select>
-
-<button type="submit">Submit Application</button>
-
-</form>
+<a class="btn learn" href="about.html">
+Learn More
+</a>
 
 </div>
 
-<script>
+</section>
 
-const CLIENT_ID = "1480639407873724608"
-const REDIRECT = window.location.origin
-const WEBHOOK = "https://discord.com/api/webhooks/1481369069834997912/0UcEa3viJP60aEV-PUdWRC_Zel9lUXZjF42Mmzf1YJ3VuRNUzmzaM-B-6OQfPjkS6br1"
+<!-- QUICK LINKS -->
 
-let discordUser = null
+<section class="quick">
 
-function loginDiscord(){
+<h2>Quick <span>Links</span></h2>
 
-window.location.href =
-`https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT)}&response_type=token&scope=identify`
+<div class="grid">
 
-}
+<div class="card">
+<i class="fa-solid fa-file"></i>
+<h3>Apply</h3>
+<a href="apply.html">Visit</a>
+</div>
 
-if(window.location.hash){
+<div class="card">
+<i class="fa-brands fa-instagram"></i>
+<h3>Instagram</h3>
+<a href="#">Visit</a>
+</div>
 
-const params = new URLSearchParams(window.location.hash.substring(1))
-const token = params.get("access_token")
+<div class="card">
+<i class="fa-brands fa-youtube"></i>
+<h3>YouTube</h3>
+<a href="#">Visit</a>
+</div>
 
-fetch("https://discord.com/api/users/@me",{
-headers:{
-authorization:`Bearer ${token}`
-}
-})
-.then(res=>res.json())
-.then(user=>{
+<div class="card">
+<i class="fa-brands fa-discord"></i>
+<h3>Discord</h3>
+<a href="#">Visit</a>
+</div>
 
-discordUser = user
+<div class="card">
+<i class="fa-solid fa-image"></i>
+<h3>Brand Kit</h3>
+<a href="#">Visit</a>
+</div>
 
-document.querySelector(".login-btn").style.display="none"
-document.getElementById("form").style.display="block"
+<div class="card">
+<i class="fa-solid fa-cart-shopping"></i>
+<h3>Store</h3>
+<a href="store.html">Visit</a>
+</div>
 
-})
+</div>
 
-}
+</section>
 
-document.getElementById("form").addEventListener("submit",function(e){
+<!-- FOOTER -->
 
-e.preventDefault()
+<footer>
 
-const data = {
+<div>
+<h2>ASRP</h2>
+<p>Immersive GTA RP experience for dedicated players.</p>
+</div>
 
-content:`<@${discordUser.id}> submitted a whitelist application`,
+<div class="footer-links">
+<h4>Quick Links</h4>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="rules.html">Rules</a>
+<a href="apply.html">Apply</a>
+</div>
 
-embeds:[
-{
-title:"ASRP 3 Whitelist Application",
-color:5763719,
+<div class="footer-links">
+<h4>Community</h4>
+<a href="store.html">Store</a>
+<a href="#">Staff</a>
+<a href="#">Events</a>
+</div>
 
-fields:[
+</footer>
 
-{name:"Discord",value:`${discordUser.username}#${discordUser.discriminator}`},
-
-{name:"User ID",value:discordUser.id},
-
-{name:"Minecraft Username",value:document.getElementById("mcname").value},
-
-{name:"Age",value:document.getElementById("age").value},
-
-{name:"Country",value:document.getElementById("country").value},
-
-{name:"Activity",value:document.getElementById("activity").value},
-
-{name:"Why Join",value:document.getElementById("why").value},
-
-{name:"Experience",value:document.getElementById("experience").value},
-
-{name:"Player Type",value:document.getElementById("type").value}
-
-]
-
-}
-]
-
-}
-
-fetch(WEBHOOK,{
-method:"POST",
-headers:{"Content-Type":"application/json"},
-body:JSON.stringify(data)
-})
-
-alert("Application Sent!")
-
-})
-
-</script>
+<div class="bottom">
+© 2026 ASRP Roleplay
+</div>
 
 </body>
 </html>
