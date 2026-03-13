@@ -16,8 +16,8 @@ font-family:Arial;
 }
 
 body{
-color:white;
 background:#0b0b0b;
+color:white;
 }
 
 /* NAVBAR */
@@ -52,16 +52,35 @@ box-shadow:0 0 10px #ff7a00;
 
 .hero{
 height:100vh;
-
-background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),
-url("asrp.mp4") center/cover no-repeat;
-
+position:relative;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+overflow:hidden;
+padding:20px;
+}
+
+.hero video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9));
+z-index:-1;
 }
 
 .hero h1{
@@ -76,6 +95,8 @@ font-size:20px;
 max-width:650px;
 }
 
+/* BUTTONS */
+
 .buttons{
 margin-top:30px;
 }
@@ -87,6 +108,7 @@ border-radius:8px;
 text-decoration:none;
 font-weight:bold;
 display:inline-block;
+transition:.3s;
 }
 
 .discord{
@@ -99,10 +121,14 @@ background:#ff7a00;
 color:white;
 }
 
-/* QUICK LINKS SECTION */
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 15px #ff7a00;
+}
+
+/* QUICK LINKS */
 
 .quick{
-
 background:
 linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.95)),
 url("quick.jpg") center/cover no-repeat;
@@ -127,6 +153,8 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:30px;
 }
+
+/* CARD */
 
 .card{
 background:rgba(0,0,0,.6);
@@ -203,17 +231,21 @@ opacity:.7;
 
 <section class="hero">
 
+<video autoplay muted loop playsinline>
+<source src="asrp.mp4" type="video/mp4">
+</video>
+
 <h1>ASRP III Has Arrived</h1>
 
 <p>
-Experience the most immersive GTA Roleplay community.
-Create your story, build your legacy and become a legend.
+Step into a realm of survival, strategy, and limitless creativity.
+Build your empire, defend your land, forge alliances, and rise as a legend in a world where every player shapes the story.
 </p>
 
 <div class="buttons">
 
-<a class="btn discord" href="#">
-<i class="fa-brands fa-discord"></i> Discord
+<a class="btn discord" href="https://discord.gg/JYhhvQBGE8">
+<i class="fa-brands fa-discord"></i> Join Discord
 </a>
 
 <a class="btn learn" href="about.html">
@@ -241,13 +273,13 @@ Learn More
 <div class="card">
 <i class="fa-brands fa-instagram"></i>
 <h3>Instagram</h3>
-<a href="#">Visit</a>
+<a href="https://www.instagram.com/ig_aafatyt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Visit</a>
 </div>
 
 <div class="card">
 <i class="fa-brands fa-youtube"></i>
 <h3>YouTube</h3>
-<a href="#">Visit</a>
+<a href="https://youtube.com/@mafiaaafat?si=ZZZTHz6CfNdRQBRx">Visit</a>
 </div>
 
 <div class="card">
@@ -259,7 +291,7 @@ Learn More
 <div class="card">
 <i class="fa-solid fa-image"></i>
 <h3>Brand Kit</h3>
-<a href="#">Visit</a>
+<a href="brand">Visit</a>
 </div>
 
 <div class="card">
@@ -278,7 +310,7 @@ Learn More
 
 <div>
 <h2>ASRP</h2>
-<p>Immersive GTA RP experience for dedicated players.</p>
+<p>Build your world, rule your realm.”</p>
 </div>
 
 <div class="footer-links">
@@ -292,14 +324,14 @@ Learn More
 <div class="footer-links">
 <h4>Community</h4>
 <a href="store.html">Store</a>
-<a href="#">Staff</a>
-<a href="#">Events</a>
+<a href="https://aafatgaming.fun/">Aafat Gaming</a>
+<a href="https://youtube.com/@mafiaaafat?si=ZZZTHz6CfNdRQBRx">Youtube</a>
 </div>
 
 </footer>
 
 <div class="bottom">
-© 2026 ASRP Roleplay
+© 2026 Aafat Syndicate Roleplay. All Rights Reserved. Designed for the ASRP Community.
 </div>
 
 </body>
